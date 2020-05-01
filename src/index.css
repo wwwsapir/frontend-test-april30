@@ -4,6 +4,7 @@
   --medium-font-size: 28px;
   --main-font-size: 18px;
   --main-font-color: #565c72;
+  --hand-cursor-pointer: url(../images/cursor_hand.svg), pointer;
 }
 
 .debug-border {
@@ -14,7 +15,8 @@
 .secondary-title,
 .new-todo-text-box,
 .tasks-remaining-label,
-.slider-label {
+.slider-label,
+.task-record {
   font-style: normal;
   font-weight: bold;
   color: var(--main-font-color);
@@ -34,6 +36,7 @@
   line-height: 66px;
   font-size: var(--medium-font-size);
   vertical-align: middle;
+  z-index: 100;
 }
 
 @media screen and (min-width: 992px) {
@@ -101,12 +104,14 @@
   bottom: 2px;
   right: 2px;
   position: absolute;
+  cursor: var(--hand-cursor-pointer);
 }
 
 .colorful-circle-button {
   bottom: 2px;
   left: 7px;
   position: absolute;
+  cursor: var(--hand-cursor-pointer);
 }
 
 .colorful-circle {
@@ -126,6 +131,8 @@
   border-radius: 50px;
   height: 66px;
   width: 100%;
+  cursor: var(--hand-cursor-pointer);
+  z-index: 50;
 }
 
 .relative-position {
@@ -173,13 +180,80 @@
 
 .tasks-window {
   position: absolute;
-  width: 864px;
+  width: 100%;
   height: 494px;
-  left: 154px;
-  top: 390px;
+  padding: 2% !important;
 
   background: #e4ebf5;
   box-shadow: -30px -30px 60px #f8f9fc, 25px 25px 60px #c5d1e7,
     inset -2px -2px 10px #fafbfd, inset 5px 5px 10px #dbe2ec;
   border-radius: 50px;
+}
+
+.task-record {
+  padding-left: 30px;
+  line-height: 75px;
+  height: 75px;
+  width: 94%;
+  margin-left: 3% !important;
+  margin-right: 3% !important;
+  vertical-align: middle;
+  font-size: var(--main-font-size);
+  cursor: var(--hand-cursor-pointer);
+}
+
+.task-record-bullet {
+  position: absolute;
+  left: 0;
+  top: 40%;
+  height: 15px;
+  width: 15px;
+
+  border: 1px solid #e4ebf5;
+  box-sizing: border-box;
+  box-shadow: -30px -30px 60px #f8f9fc, -5px -5px 10px #f8f9fc,
+    5px 5px 10px #c5d1e7;
+  border-radius: 50px;
+}
+
+.task-record-bullet-checkmark {
+  position: absolute;
+  opacity: 0.8;
+}
+
+.bg-cyan {
+  background: #5ed8e7;
+}
+
+.bg-pink {
+  background: #f97677;
+}
+
+.bg-green {
+  background: #a3f1e0;
+}
+
+.bg-red {
+  background: #ff5b5a;
+}
+
+.bg-yellow {
+  background: #e0fb5f;
+}
+
+.record-checkbox {
+  position: absolute;
+  top: -15px;
+  right: -42px;
+}
+
+.line-between-records {
+  position: absolute;
+  left: 4.19%;
+  right: 3.84%;
+  top: 100%;
+  bottom: 0%;
+
+  border: 2px solid #dfe6ef;
+  box-shadow: 0px 1px 2px #f7f8fb;
 }
