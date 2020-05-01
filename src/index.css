@@ -1,37 +1,39 @@
-.debug-border {
-  border: red solid 5px;
+:root {
+  --main-bg-color: #e4ebf5;
+  --large-font-size: 48px;
+  --medium-font-size: 34px;
+  --main-font-size: 18px;
+}
+
+.title,
+.secondary-title,
+.new-todo-text-box {
+  font-style: normal;
+  font-weight: bold;
+  color: #565c72;
 }
 
 .bg-grey {
-  background: #e4ebf5;
-}
-
-.title {
-  font-style: normal;
-  font-weight: bold;
-  color: #565c72;
+  background: var(--main-bg-color);
 }
 
 .secondary-title {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 48px;
+  font-size: var(--main-font-size);
+  line-height: var(--large-font-size);
   text-align: right;
-  color: #565c72;
 }
 
 @media screen and (min-width: 701px) {
   .title {
-    line-height: 48px;
-    font-size: 48px;
+    line-height: var(--large-font-size);
+    font-size: var(--large-font-size);
   }
 }
 
 @media screen and (max-width: 700px) {
   .title {
-    line-height: 34px;
-    font-size: 34px;
+    line-height: var(--medium-font-size);
+    font-size: var(--medium-font-size);
   }
 }
 
@@ -40,19 +42,18 @@
 }
 
 .vertical-space {
-  height: 15vh;
+  height: 10vh;
 }
 
 .new-todo-text-box {
   line-height: 92px;
-  background: #e4ebf5;
+  background: var(--main-bg-color);
   box-shadow: inset 5px 5px 30px #d1d9e6, inset -5px -5px 10px #fdfdfe;
   border-radius: 50px;
   width: 100%;
-  font-weight: bold;
-  font-size: 20px;
   padding-left: 100px;
   margin-top: 20px;
+  font-size: var(--main-font-size);
 }
 
 .arrow-button {
@@ -77,7 +78,7 @@
 }
 
 .filter-box {
-  background: #e4ebf5;
+  background: var(--main-bg-color);
   box-shadow: -30px -30px 60px #f8f9fc, 25px 25px 60px #c5d1e7,
     inset -2px -2px 10px #fafbfd, inset 5px 5px 10px #dbe2ec;
   border-radius: 50px;
