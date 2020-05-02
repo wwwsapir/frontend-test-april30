@@ -252,9 +252,12 @@
 }
 
 .task-done {
+  opacity: 0.5;
+}
+
+.task-done-text {
   text-decoration-line: line-through;
   color: #9cacc6;
-  opacity: 0.5;
 }
 
 .selected-record {
