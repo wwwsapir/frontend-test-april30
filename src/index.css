@@ -162,9 +162,10 @@
 
 .slider-labels-area {
   position: absolute;
-  width: 98%;
-  margin-left: 1% !important;
-  margin-right: 1% !important;
+  width: 100%;
+  padding-left: 5%;
+  padding-right: 2%;
+  box-sizing: border-box;
 }
 
 .tasks-window {
@@ -175,6 +176,7 @@
   padding-bottom: 2% !important;
   padding-left: 0 !important;
   padding-right: 5px !important;
+  box-sizing: border-box;
 
   background: #e4ebf5;
   box-shadow: -30px -30px 60px #f8f9fc, 25px 25px 60px #c5d1e7,
@@ -190,6 +192,7 @@
   vertical-align: middle;
   font-size: var(--main-font-size);
   cursor: var(--hand-cursor-pointer);
+  box-sizing: border-box;
 }
 
 .task-record-label {
