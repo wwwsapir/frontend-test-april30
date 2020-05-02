@@ -71,6 +71,7 @@
   border-radius: 50px;
   width: 100%;
   padding-left: 100px;
+  padding-right: 90px;
   margin-top: 20px;
   font-size: var(--main-font-size);
   border-style: none;
@@ -273,4 +274,6 @@
   position: absolute;
   right: -134px;
   top: -10px;
+  cursor: var(--hand-cursor-pointer);
+  z-index: 50;
 }
